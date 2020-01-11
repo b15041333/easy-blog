@@ -1,0 +1,56 @@
+body{
+    background:saddlebrown;
+}
+
+.side-bar{
+    position: relative;
+    width:100%;
+
+    /* 清除浮动 */
+    float:none;
+}
+
+.main{
+    width:100%;
+
+     /* 将子元素向内推了一点，为屏幕边缘留出空隙 */
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.article-list{
+    margin:0;
+}
+
+.side-bar .nav,
+.side-bar .tag-list{
+
+    /* 默认隐藏 */
+    display:none;
+
+    /* 文字居中 */
+    text-align:center;
+}
+
+/* #menu-checkbox{
+    display:none;
+} */
+/* 不需要了，因为main.css中写了，不冲突的内容main中都生效的 */
+
+#menu-checkbox:checked ~ .nav,
+#menu-checkbox:checked ~ .tag-list
+{
+    /* 这种带冒号的形式叫做伪类选择器 */
+    /* 若menu-checkbox对应元素打勾，那么其下的.nav .tag-list元素都应该由隐藏转为显示状态 */
+    display:block;
+}
+
+#menu-toggle{
+    display:block;
+    position:absolute;
+    top:15px;
+    right:0;
+    font-size:18px;
+    font-weight:100;
+    color:#fff;
+}
