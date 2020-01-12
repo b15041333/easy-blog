@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- 优先使用main.css，当屏幕宽度低于768px时，若某元素在mobile.css中存在样式的更改，那么原有样式会被覆盖 -->
+  <link rel="stylesheet" media="(max-width:768px)"href="css/mobile.css">
   <title>王花花</title>
 </head>
 <body>
   <div class="side-bar">
     <div class="header">
       <a href="index.html" class="logo">王花花</a>
-      <div class="intro">Lorem ipsum dolor sit amet dolor sit ame.</div>
+      <div class="intro">我爱学习，学习使我快乐。</div>
     </div>
     <div class="nav">
       <a href="#" class="item">关于我</a>
